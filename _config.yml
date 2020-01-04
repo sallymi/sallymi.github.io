@@ -106,7 +106,7 @@ deploy:
 
 backup:
   type: git
-  theme: next
+  #theme: next
   message: Back up my sallymi.github.io blog
   repository:
     github: git@github.com:sallymi/sallymi.github.io.git,backup
