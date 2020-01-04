@@ -46,19 +46,19 @@
   };
 </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="s3fs mytest123 &#x2F;mnt&#x2F;kp-nc -o url&#x3D;&lt;https:&#x2F;&#x2F;s3.us-south.cloud-object-storage.appdomain.cloud&gt; -o passwd_file&#x3D;&#x2F;mnt&#x2F;key s3fs mytest123 &#x2F;mnt&#x2F;kp-c -o url&#x3D;&lt;https:&#x2F;&#x2F;s3.us-south.cloud-object-storage.a">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://sallymi.github.io/2020/01/04/hello-world/index.html">
+<meta property="og:title" content="cos-mount">
+<meta property="og:url" content="https://sallymi.github.io/2020/01/04/cos-mount/index.html">
 <meta property="og:site_name" content="Sally&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="s3fs mytest123 &#x2F;mnt&#x2F;kp-nc -o url&#x3D;&lt;https:&#x2F;&#x2F;s3.us-south.cloud-object-storage.appdomain.cloud&gt; -o passwd_file&#x3D;&#x2F;mnt&#x2F;key s3fs mytest123 &#x2F;mnt&#x2F;kp-c -o url&#x3D;&lt;https:&#x2F;&#x2F;s3.us-south.cloud-object-storage.a">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-04T06:37:58.221Z">
-<meta property="article:modified_time" content="2020-01-04T08:52:50.160Z">
+<meta property="article:published_time" content="2020-01-04T09:21:09.000Z">
+<meta property="article:modified_time" content="2020-01-04T09:21:53.915Z">
 <meta property="article:author" content="Sally">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sallymi.github.io/2020/01/04/hello-world/">
+<link rel="canonical" href="https://sallymi.github.io/2020/01/04/cos-mount/">
 
 
 <script id="page-configurations">
@@ -70,7 +70,7 @@
   };
 </script>
 
-  <title>Hello World | Sally's blog</title>
+  <title>cos-mount | Sally's blog</title>
   
 
 
@@ -179,7 +179,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/cos-mount/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +192,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          cos-mount
         </h1>
 
         <div class="post-meta">
@@ -203,7 +203,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-04 14:37:58 / 修改时间：16:52:50" itemprop="dateCreated datePublished" datetime="2020-01-04T14:37:58+08:00">2020-01-04</time>
+              <time title="创建时间：2020-01-04 17:21:09 / 修改时间：17:21:53" itemprop="dateCreated datePublished" datetime="2020-01-04T17:21:09+08:00">2020-01-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,19 +228,20 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>s3fs mytest123 /mnt/kp-nc -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key</p>
+<p>s3fs mytest123 /mnt/kp-c -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key<br>-o,umask=0007,use_path_request_style,use_sse=kmsid,dbglevel=info -f</p>
+<p>s3fs sallytest /mnt/kp-nc -o url=&lt;<a href="https://s3.ap.cloud-object-" target="_blank" rel="noopener">https://s3.ap.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key<br>-o,umask=0007,use_path_request_style,use_sse=kmsid,dbglevel=info -f</p>
+<p>s3fs mytest123 /mnt/kp-c -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key<br>-o,umask=0007,use_path_request_style,use_sse=custom,dbglevel=info -f</p>
+<p>s3fs mytest123 /mnt/kp-c -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key -o use_sse=kmsid -o<br>dbglevel=info -f</p>
+<p>curl -X POST \<br>“<a href="https://iam.bluemix.net/identity/token" target="_blank" rel="noopener"">https://iam.bluemix.net/identity/token”</a><br>\<br>-H “Content-Type: application/x-www-form-urlencoded” \<br>-H “Accept: application/json” \<br>-d “grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&amp;apikey=1QpV61aKwJIrUlti_2R7d5WzdzppAZjQN48vPFVNLoX7”</p>
+<p>curl -X POST \<br><a href="https://iam.bluemix.net/identity/token" target="_blank" rel="noopener">https://iam.bluemix.net/identity/token</a> \<br>-H “Content-Type: application/x-www-form-urlencoded” \<br>-H “Accept: application/json” \<br>-d “grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&amp;apikey=1QpV61aKwJIrUlti_2R7d5WzdzppAZjQN48vPFVNLoX7”</p>
+<p>crn:v1:bluemix:public:cloud-object-<br>storage:global:a/290f8f438c15a26b2b129419c1e9861f:f1f11fc4-939f-4896-9b53-f66a1661e14a::<br>f1f11fc4-939f-4896-9b53-f66a1661e14a</p>
+<p>curl -X GET &lt;<a href="https://keyprotect.us-" target="_blank" rel="noopener">https://keyprotect.us-</a><br>south.bluemix.net/api/v2/keys/da742336-a8ac-47cc-a1ee-3a1253344cb2&gt; -H<br>‘authorization: Bearer $TOKEN’ -H ‘bluemix-instance:<br>f1f11fc4-939f-4896-9b53-f66a1661e14a’ -H ‘accept:<br>application/vnd.ibm.kms.key+json’</p>
+<p>curl -X GET &lt;<a href="https://keyprotect.us-" target="_blank" rel="noopener">https://keyprotect.us-</a><br>south.bluemix.net/api/v2/keys/da742336-a8ac-47cc-a1ee-3a1253344cb2&gt; -H<br>‘authorization: Bearer<br>eyJraWQiOiIyMDE3MTAzMC0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLWJmOTJmOWVhLWUwNDktNGI4MS1iOWY0LWU3NjliNGExNjRiYyIsImlkIjoiaWFtLVNlcnZpY2VJZC1iZjkyZjllYS1lMDQ5LTRiODEtYjlmNC1lNzY5YjRhMTY0YmMiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC1iZjkyZjllYS1lMDQ5LTRiODEtYjlmNC1lNzY5YjRhMTY0YmMiLCJzdWIiOiJTZXJ2aWNlSWQtYmY5MmY5ZWEtZTA0OS00YjgxLWI5ZjQtZTc2OWI0YTE2NGJjIiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiIyOTBmOGY0MzhjMTVhMjZiMmIxMjk0MTljMWU5ODYxZiJ9LCJpYXQiOjE1NDcxODgyNTksImV4cCI6MTU0NzE5MTg1OSwiaXNzIjoiaHR0cHM6Ly9pYW0uYmx1ZW1peC5uZXQvaWRlbnRpdHkiLCJncmFudF90eXBlIjoidXJuOmlibTpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTphcGlrZXkiLCJzY29wZSI6ImlibSBvcGVuaWQiLCJjbGllbnRfaWQiOiJkZWZhdWx0IiwiYWNyIjoxLCJhbXIiOlsicHdkIl19.GXfZHETWeNyghiyYC0jwTOTqRQ0plSLGZylkOUkl6MLzOH3Oy5VyZmreUV0k0M6xkbg6KBNQcru9h2nq7k3rEx1B7vNUVJN271T17_yxdUFF_aWU4jxC4JMNUkAsmEun_pip1VFhhQC5yH6HUsPQuW1SIqPH9Nn-<br>avsP7JO7JZDu_n5RPKUZjhFNxDgn-<br>kA2NlKSctinId_11bIVZjDumRzPLUMzTcY7pKBzPWMFr6fLyk3FPiv0SMEbbrSny27WhwMmDYk27zk0g3YiQM81R1M2mX1_NKwscp_k1G9lUO9FmAzVbIsMYx2aWl7-FygO5lBd-<br>MRPHtLhKpZRT_-Elg’ -H ‘bluemix-instance:25f403ed-3645-433d-b24c-40309c826856’<br>-H ‘accept: application/vnd.ibm.kms.key+json’</p>
+<p>curl -X PUT <a href="https://s3.us-south.objectstorage.softlayer.net" target="_blank" rel="noopener">https://s3.us-south.objectstorage.softlayer.net</a></p>
+<p>curl -X “POST”<br>“<a href="https://iam.bluemix.net/oidc/token" target="_blank" rel="noopener"">https://iam.bluemix.net/oidc/token”</a> \<br>-H ‘Accept: application/json’ \<br>-H ‘Content-Type: application/x-www-form-urlencoded’ \<br>–data-urlencode “apikey=9BWoHWYnVP4GH2rtG1ZAoBuQy4tDVdYGLIGwABUY-p5U” \<br>–data-urlencode “response_type=cloud_iam” \<br>–data-urlencode “grant_type=urn:ibm:params:oauth:grant-type:apikey”</p>
+<p>create bucket enable kp</p>
+<p>curl -X “PUT” “[<a href="https://s3.us-" target="_blank" rel="noopener">https://s3.us-</a><br>south.objectstorage.softlayer.net/simpletest”](<a href="https://s3.us-" target="_blank" rel="noopener">https://s3.us-</a><br>south.objectstorage.softlayer.net/simpletest”) -H “Authorization: Bearer<br>eyJraWQiOiIyMDE3MTAzMC0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLTBhYWFiMzExLTQzOWEtNDdhYy05NmYxLTAyMWE3YmNkY2UxMyIsImlkIjoiaWFtLVNlcnZpY2VJZC0wYWFhYjMxMS00MzlhLTQ3YWMtOTZmMS0wMjFhN2JjZGNlMTMiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC0wYWFhYjMxMS00MzlhLTQ3YWMtOTZmMS0wMjFhN2JjZGNlMTMiLCJzdWIiOiJTZXJ2aWNlSWQtMGFhYWIzMTEtNDM5YS00N2FjLTk2ZjEtMDIxYTdiY2RjZTEzIiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiIyOTBmOGY0MzhjMTVhMjZiMmIxMjk0MTljMWU5ODYxZiJ9LCJpYXQiOjE1NDcxOTIzNjEsImV4cCI6MTU0NzE5NTk2MSwiaXNzIjoiaHR0cHM6Ly9pYW0ubmcuYmx1ZW1peC5uZXQvb2lkYy90b2tlbiIsImdyYW50X3R5cGUiOiJ1cm46aWJtOnBhcmFtczpvYXV0aDpncmFudC10eXBlOmFwaWtleSIsInNjb3BlIjoiaWJtIG9wZW5pZCIsImNsaWVudF9pZCI6ImRlZmF1bHQiLCJhY3IiOjEsImFtciI6WyJwd2QiXX0.IhYBWB6WJRR9Pi_S8hmEqXlqF9jrKdqCUF1O1-JXnjEli-O1EZNzfqevLFkgVuPLZ3FQpe0kaPRlDm9rmQsJ-93cbMrGEbLnOQMTrL3HpTqPQZJnmIJiJh6QSLYUFb6fBbEII_ydP56q3dLohXAfIyViW5S6p-PqEeuSCT5BW6kWiJdSTW4d1VUrxJ15HL2hOnxxL46izc9rIIV_nPqlMPQDKinK8vEvvD1xFag4wLEMmqYWiqrE8QFWYyR9rcCYPG7vLIFsQZf23fdx2qhjfFXXjqueVyeHjwzP9ED_i5vMpsjWOMFdgkFcacdcQcSRS3cqXoQUm5wyqOCsz6EKUQ”<br>-H “ibm-service-instance-id: f1f11fc4-939f-4896-9b53-f66a1661e14a” -H “ibm-<br>sse-kp-encryption-algorithm : AES256” -H “ibm-sse-kp-customer-root-key-crn :<br>crn:v1:bluemix:public:kms:us-<br>south:a/290f8f438c15a26b2b129419c1e9861f:25f403ed-3645-433d-b24c-40309c826856:key:da742336-a8ac-47cc-a1ee-3a1253344cb2”</p>
 
     </div>
 
@@ -255,11 +256,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/01/04/setup-github-blog/" rel="next" title="使用GitHub Page搭建个人博客">
-      使用GitHub Page搭建个人博客 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/04/blockstorage-tutorial/" rel="prev" title="blockstorage-tutorial">
+      <i class="fa fa-chevron-left"></i> blockstorage-tutorial
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -319,7 +320,6 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

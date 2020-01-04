@@ -46,19 +46,20 @@
   };
 </script>
 
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="在Centor7上连接block storage, 并且设置backup   创建block storageblockstorage只能从IaaS平台上购买，可以根据自己的需求购买。 连接添加Authorize Host按照UI的指示可以为block storage添加Authorize Host。注意，只能添加在同一个DC的host Mounting block storage volume我们">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://sallymi.github.io/2020/01/04/hello-world/index.html">
+<meta property="og:title" content="blockstorage-tutorial">
+<meta property="og:url" content="https://sallymi.github.io/2020/01/04/blockstorage-tutorial/index.html">
 <meta property="og:site_name" content="Sally&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在Centor7上连接block storage, 并且设置backup   创建block storageblockstorage只能从IaaS平台上购买，可以根据自己的需求购买。 连接添加Authorize Host按照UI的指示可以为block storage添加Authorize Host。注意，只能添加在同一个DC的host Mounting block storage volume我们">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-01-04T06:37:58.221Z">
-<meta property="article:modified_time" content="2020-01-04T08:52:50.160Z">
+<meta property="article:published_time" content="2020-01-04T09:19:40.000Z">
+<meta property="article:modified_time" content="2020-01-04T09:20:48.006Z">
 <meta property="article:author" content="Sally">
+<meta property="article:tag" content="blockstorage">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="https://sallymi.github.io/2020/01/04/hello-world/">
+<link rel="canonical" href="https://sallymi.github.io/2020/01/04/blockstorage-tutorial/">
 
 
 <script id="page-configurations">
@@ -70,7 +71,7 @@
   };
 </script>
 
-  <title>Hello World | Sally's blog</title>
+  <title>blockstorage-tutorial | Sally's blog</title>
   
 
 
@@ -179,7 +180,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/hello-world/">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/blockstorage-tutorial/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -192,7 +193,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          Hello World
+          blockstorage-tutorial
         </h1>
 
         <div class="post-meta">
@@ -203,7 +204,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2020-01-04 14:37:58 / 修改时间：16:52:50" itemprop="dateCreated datePublished" datetime="2020-01-04T14:37:58+08:00">2020-01-04</time>
+              <time title="创建时间：2020-01-04 17:19:40 / 修改时间：17:20:48" itemprop="dateCreated datePublished" datetime="2020-01-04T17:19:40+08:00">2020-01-04</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -228,19 +229,59 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <p>在Centor7上连接block storage, 并且设置backup  </p>
+<h2 id="创建block-storage"><a href="#创建block-storage" class="headerlink" title="创建block storage"></a>创建block storage</h2><p>blockstorage只能从IaaS平台上购买，可以根据自己的需求购买。</p>
+<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="添加Authorize-Host"><a href="#添加Authorize-Host" class="headerlink" title="添加Authorize Host"></a>添加Authorize Host</h3><p>按照UI的指示可以为block storage添加Authorize Host。<br>注意，只能添加在同一个DC的host</p>
+<h3 id="Mounting-block-storage-volume"><a href="#Mounting-block-storage-volume" class="headerlink" title="Mounting block storage volume"></a>Mounting block storage volume</h3><p>我们使用的是CentOS7</p>
+<ol>
+<li><p>yum install iscsi-initiator-utils device-mapper-multipath</p>
+</li>
+<li><p>modprobe dm-multipath<br>systemctl start multipathd<br>systemctl enable multipathd</p>
+</li>
+<li><p>vi /etc/multipath.conf<br>multipath -ll</p>
+</li>
+<li><p>vi /etc/iscsi/initiatorname.iscsi<br>编辑 InitiatorName=， 其中InitiatorName是IQN</p>
+</li>
+<li><p>vi /etc/iscsi/iscsid.conf<br>编辑，value都可以从authorized Host得到<br>node.session.auth.authmethod = CHAP<br>node.session.auth.username =<br>node.session.auth.password =<br>discovery.sendtargets.auth.authmethod = CHAP<br>discovery.sendtargets.auth.username =<br>discovery.sendtargets.auth.password =</p>
+</li>
+<li><p>systemctl enable iscsi<br>systemctl enable iscsid<br>systemctl start iscsi<br>systemctl start iscsid</p>
+</li>
+<li><p>iscsiadm -m discovery -t sendtargets -p<br>其中ip-value-from-SL-Portal指的是block storage的IP，不要错误用了authorized host的ip<br>iscsiadm -m node -L automatic</p>
+</li>
+<li><p>verify<br>iscsiadm -m session<br>multipath -l<br>fdisk -l | grep /dev/mapper</p>
+</li>
+</ol>
+<h3 id="Creating-a-file-system-by-fdisk"><a href="#Creating-a-file-system-by-fdisk" class="headerlink" title="Creating a file system by fdisk"></a>Creating a file system by fdisk</h3><ol>
+<li><p>得到disk name<br>fdisk -l | grep /dev/mapper</p>
+</li>
+<li><p>生成 partition<br>fdisk /dev/mapper/XXX</p>
+</li>
+<li><p>生成file system在新的partition上<br>fdisk –l /dev/mapper/XXX<br>mkfs.ext3 /dev/mapper/XXXlp1<br>在执行格式化命令mkfs.ext3的时候，有时候会出现以下错误：<br>Could not stat /dev/mapper/3600a0980383030516e2b464b47755147p1 — No such file<br>or directory</p>
+</li>
+</ol>
+<p>The device apparently does not exist; did you specify it correctly?<br>我们用下面的方法解决：<br>首先rpm -qa | grep parted查看是否已经安装了partprobe命令<br>执行partprobe</p>
+<ol start="4">
+<li><p>mkdir /PerfDisk<br>mount /dev/mapper/XXXlp1 /PerfDisk<br>df -h</p>
+</li>
+<li><p>Add the new file system to the system’s /etc/fstab file to enable automatic mounting on boot<br>/etc/fstab<br>增加下面一行<br>/dev/mapper/XXXlp1 /PerfDisk ext3 defaults,_netdev 0 1</p>
+</li>
+</ol>
+<h3 id="Creating-a-file-system-by-parted"><a href="#Creating-a-file-system-by-parted" class="headerlink" title="Creating a file system by parted"></a>Creating a file system by parted</h3><p>parted<br>(parted) select /dev/mapper/XXX<br>(parted) print<br>(parted) mklabel gpt<br>(parted) mkpart<br>(parted) quit<br>mkfs.ext3 /dev/mapper/XXXlp1<br>mkdir /PerfDisk<br>mount /dev/mapper/XXXlp1 /PerfDisk<br>df -h</p>
+<h2 id="错误排查"><a href="#错误排查" class="headerlink" title="错误排查"></a>错误排查</h2><ol>
+<li><p>检查multipath To check whether multipath is picking up the devices, list the devices. If it’s configured correct, only two NETAPP devices show up.<br>multipath -l</p>
+</li>
+<li><p>检查disks<br>fdisk -l | grep Disk<br>有两个disks有同样的identifier，并且/dev/mapper显示有同样的大小。<br>如果只是现实了sd*, 而没有显示/dev/mapper，表示没有正确的set up</p>
+</li>
+</ol>
+<h2 id="snapshots-space"><a href="#snapshots-space" class="headerlink" title="snapshots space"></a>snapshots space</h2><h3 id="order-snapshot-space"><a href="#order-snapshot-space" class="headerlink" title="order snapshot space"></a>order snapshot space</h3><p>在order snapshot 的时候，并没有选择是endurance或者performance，而是只询问了大小。Snapshot space is<br>directly tied to the source volume so if it’s performance it comes from<br>performance</p>
+<h3 id="手工snapshot"><a href="#手工snapshot" class="headerlink" title="手工snapshot"></a>手工snapshot</h3><p>直接在portal上可以完成</p>
+<h3 id="snapshot-schedule"><a href="#snapshot-schedule" class="headerlink" title="snapshot schedule"></a>snapshot schedule</h3><p>直接在portal上可以完成</p>
+<h2 id="unmount"><a href="#unmount" class="headerlink" title="unmount"></a>unmount</h2><p>##修改cPanel的backup到blockstorage<br>假设mount point为backup2<br>rsync -azv /backup/* /backup2/<br>登陆到WHM， Home &gt; Backup &gt; Backup Configuration.<br>修改2处：</p>
+<ol>
+<li>default backup directory</li>
+<li>Enable to mount a backup drive</li>
+</ol>
+<p>##Lun<br>iscsiadm -m session -P 3<br>multipath -ll</p>
 
     </div>
 
@@ -249,16 +290,22 @@
     
 
       <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/blockstorage/" rel="tag"># blockstorage</a>
+          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/01/04/setup-github-blog/" rel="next" title="使用GitHub Page搭建个人博客">
-      使用GitHub Page搭建个人博客 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/01/04/cos-s3fs/" rel="prev" title="cos s3fs">
+      <i class="fa fa-chevron-left"></i> cos s3fs
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/04/cos-mount/" rel="next" title="cos-mount">
+      cos-mount <i class="fa fa-chevron-right"></i>
     </a></div>
     </div>
       </footer>
@@ -319,7 +366,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Quick-Start"><span class="nav-number">1.</span> <span class="nav-text">Quick Start</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Create-a-new-post"><span class="nav-number">1.1.</span> <span class="nav-text">Create a new post</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Run-server"><span class="nav-number">1.2.</span> <span class="nav-text">Run server</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Generate-static-files"><span class="nav-number">1.3.</span> <span class="nav-text">Generate static files</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Deploy-to-remote-sites"><span class="nav-number">1.4.</span> <span class="nav-text">Deploy to remote sites</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#创建block-storage"><span class="nav-number">1.</span> <span class="nav-text">创建block storage</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#连接"><span class="nav-number">2.</span> <span class="nav-text">连接</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#添加Authorize-Host"><span class="nav-number">2.1.</span> <span class="nav-text">添加Authorize Host</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Mounting-block-storage-volume"><span class="nav-number">2.2.</span> <span class="nav-text">Mounting block storage volume</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-a-file-system-by-fdisk"><span class="nav-number">2.3.</span> <span class="nav-text">Creating a file system by fdisk</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Creating-a-file-system-by-parted"><span class="nav-number">2.4.</span> <span class="nav-text">Creating a file system by parted</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#错误排查"><span class="nav-number">3.</span> <span class="nav-text">错误排查</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#snapshots-space"><span class="nav-number">4.</span> <span class="nav-text">snapshots space</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#order-snapshot-space"><span class="nav-number">4.1.</span> <span class="nav-text">order snapshot space</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#手工snapshot"><span class="nav-number">4.2.</span> <span class="nav-text">手工snapshot</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#snapshot-schedule"><span class="nav-number">4.3.</span> <span class="nav-text">snapshot schedule</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#unmount"><span class="nav-number">5.</span> <span class="nav-text">unmount</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 

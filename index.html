@@ -1,196 +1,1428 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-  <meta charset="utf-8">
-  
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-  
-  <title>Hexo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://sallymi.github.io').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
   <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta property="og:locale" content="en_US">
-<meta property="article:author" content="John Doe">
+<meta property="og:title" content="Sally&#39;s blog">
+<meta property="og:url" content="https://sallymi.github.io/index.html">
+<meta property="og:site_name" content="Sally&#39;s blog">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:author" content="Sally">
 <meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-  
-  
-    <link rel="icon" href="/favicon.png">
-  
-  
-    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  
-  
-<link rel="stylesheet" href="/css/style.css">
 
-<meta name="generator" content="Hexo 4.2.0"></head>
+<link rel="canonical" href="https://sallymi.github.io/">
 
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">Hexo</a>
-      </h1>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: true,
+    isPost: false
+  };
+</script>
+
+  <title>Sally's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sally's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
     </div>
   </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2020/01/04/hello-world/" class="article-date">
-  <time datetime="2020-01-04T06:37:58.221Z" itemprop="datePublished">2020-01-04</time>
-</a>
-    
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
   </div>
-  <div class="article-inner">
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
     
-    
-      <header class="article-header">
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/01/04/hello-world/">Hello World</a>
-    </h1>
   
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/cos-mount/">
 
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/cos-mount/" class="post-title-link" itemprop="url">cos-mount</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:21:09 / 修改时间：17:21:53" itemprop="dateCreated datePublished" datetime="2020-01-04T17:21:09+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
       </header>
+
     
-    <div class="article-entry" itemprop="articleBody">
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+          <p>s3fs mytest123 /mnt/kp-nc -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key</p>
+<p>s3fs mytest123 /mnt/kp-c -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key<br>-o,umask=0007,use_path_request_style,use_sse=kmsid,dbglevel=info -f</p>
+<p>s3fs sallytest /mnt/kp-nc -o url=&lt;<a href="https://s3.ap.cloud-object-" target="_blank" rel="noopener">https://s3.ap.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key<br>-o,umask=0007,use_path_request_style,use_sse=kmsid,dbglevel=info -f</p>
+<p>s3fs mytest123 /mnt/kp-c -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key<br>-o,umask=0007,use_path_request_style,use_sse=custom,dbglevel=info -f</p>
+<p>s3fs mytest123 /mnt/kp-c -o url=&lt;<a href="https://s3.us-south.cloud-object-" target="_blank" rel="noopener">https://s3.us-south.cloud-object-</a><br>storage.appdomain.cloud&gt; -o passwd_file=/mnt/key -o use_sse=kmsid -o<br>dbglevel=info -f</p>
+<p>curl -X POST \<br>“<a href="https://iam.bluemix.net/identity/token" target="_blank" rel="noopener"">https://iam.bluemix.net/identity/token”</a><br>\<br>-H “Content-Type: application/x-www-form-urlencoded” \<br>-H “Accept: application/json” \<br>-d “grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&amp;apikey=1QpV61aKwJIrUlti_2R7d5WzdzppAZjQN48vPFVNLoX7”</p>
+<p>curl -X POST \<br><a href="https://iam.bluemix.net/identity/token" target="_blank" rel="noopener">https://iam.bluemix.net/identity/token</a> \<br>-H “Content-Type: application/x-www-form-urlencoded” \<br>-H “Accept: application/json” \<br>-d “grant_type=urn%3Aibm%3Aparams%3Aoauth%3Agrant-type%3Aapikey&amp;apikey=1QpV61aKwJIrUlti_2R7d5WzdzppAZjQN48vPFVNLoX7”</p>
+<p>crn:v1:bluemix:public:cloud-object-<br>storage:global:a/290f8f438c15a26b2b129419c1e9861f:f1f11fc4-939f-4896-9b53-f66a1661e14a::<br>f1f11fc4-939f-4896-9b53-f66a1661e14a</p>
+<p>curl -X GET &lt;<a href="https://keyprotect.us-" target="_blank" rel="noopener">https://keyprotect.us-</a><br>south.bluemix.net/api/v2/keys/da742336-a8ac-47cc-a1ee-3a1253344cb2&gt; -H<br>‘authorization: Bearer $TOKEN’ -H ‘bluemix-instance:<br>f1f11fc4-939f-4896-9b53-f66a1661e14a’ -H ‘accept:<br>application/vnd.ibm.kms.key+json’</p>
+<p>curl -X GET &lt;<a href="https://keyprotect.us-" target="_blank" rel="noopener">https://keyprotect.us-</a><br>south.bluemix.net/api/v2/keys/da742336-a8ac-47cc-a1ee-3a1253344cb2&gt; -H<br>‘authorization: Bearer<br>eyJraWQiOiIyMDE3MTAzMC0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLWJmOTJmOWVhLWUwNDktNGI4MS1iOWY0LWU3NjliNGExNjRiYyIsImlkIjoiaWFtLVNlcnZpY2VJZC1iZjkyZjllYS1lMDQ5LTRiODEtYjlmNC1lNzY5YjRhMTY0YmMiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC1iZjkyZjllYS1lMDQ5LTRiODEtYjlmNC1lNzY5YjRhMTY0YmMiLCJzdWIiOiJTZXJ2aWNlSWQtYmY5MmY5ZWEtZTA0OS00YjgxLWI5ZjQtZTc2OWI0YTE2NGJjIiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiIyOTBmOGY0MzhjMTVhMjZiMmIxMjk0MTljMWU5ODYxZiJ9LCJpYXQiOjE1NDcxODgyNTksImV4cCI6MTU0NzE5MTg1OSwiaXNzIjoiaHR0cHM6Ly9pYW0uYmx1ZW1peC5uZXQvaWRlbnRpdHkiLCJncmFudF90eXBlIjoidXJuOmlibTpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTphcGlrZXkiLCJzY29wZSI6ImlibSBvcGVuaWQiLCJjbGllbnRfaWQiOiJkZWZhdWx0IiwiYWNyIjoxLCJhbXIiOlsicHdkIl19.GXfZHETWeNyghiyYC0jwTOTqRQ0plSLGZylkOUkl6MLzOH3Oy5VyZmreUV0k0M6xkbg6KBNQcru9h2nq7k3rEx1B7vNUVJN271T17_yxdUFF_aWU4jxC4JMNUkAsmEun_pip1VFhhQC5yH6HUsPQuW1SIqPH9Nn-<br>avsP7JO7JZDu_n5RPKUZjhFNxDgn-<br>kA2NlKSctinId_11bIVZjDumRzPLUMzTcY7pKBzPWMFr6fLyk3FPiv0SMEbbrSny27WhwMmDYk27zk0g3YiQM81R1M2mX1_NKwscp_k1G9lUO9FmAzVbIsMYx2aWl7-FygO5lBd-<br>MRPHtLhKpZRT_-Elg’ -H ‘bluemix-instance:25f403ed-3645-433d-b24c-40309c826856’<br>-H ‘accept: application/vnd.ibm.kms.key+json’</p>
+<p>curl -X PUT <a href="https://s3.us-south.objectstorage.softlayer.net" target="_blank" rel="noopener">https://s3.us-south.objectstorage.softlayer.net</a></p>
+<p>curl -X “POST”<br>“<a href="https://iam.bluemix.net/oidc/token" target="_blank" rel="noopener"">https://iam.bluemix.net/oidc/token”</a> \<br>-H ‘Accept: application/json’ \<br>-H ‘Content-Type: application/x-www-form-urlencoded’ \<br>–data-urlencode “apikey=9BWoHWYnVP4GH2rtG1ZAoBuQy4tDVdYGLIGwABUY-p5U” \<br>–data-urlencode “response_type=cloud_iam” \<br>–data-urlencode “grant_type=urn:ibm:params:oauth:grant-type:apikey”</p>
+<p>create bucket enable kp</p>
+<p>curl -X “PUT” “[<a href="https://s3.us-" target="_blank" rel="noopener">https://s3.us-</a><br>south.objectstorage.softlayer.net/simpletest”](<a href="https://s3.us-" target="_blank" rel="noopener">https://s3.us-</a><br>south.objectstorage.softlayer.net/simpletest”) -H “Authorization: Bearer<br>eyJraWQiOiIyMDE3MTAzMC0wMDowMDowMCIsImFsZyI6IlJTMjU2In0.eyJpYW1faWQiOiJpYW0tU2VydmljZUlkLTBhYWFiMzExLTQzOWEtNDdhYy05NmYxLTAyMWE3YmNkY2UxMyIsImlkIjoiaWFtLVNlcnZpY2VJZC0wYWFhYjMxMS00MzlhLTQ3YWMtOTZmMS0wMjFhN2JjZGNlMTMiLCJyZWFsbWlkIjoiaWFtIiwiaWRlbnRpZmllciI6IlNlcnZpY2VJZC0wYWFhYjMxMS00MzlhLTQ3YWMtOTZmMS0wMjFhN2JjZGNlMTMiLCJzdWIiOiJTZXJ2aWNlSWQtMGFhYWIzMTEtNDM5YS00N2FjLTk2ZjEtMDIxYTdiY2RjZTEzIiwic3ViX3R5cGUiOiJTZXJ2aWNlSWQiLCJhY2NvdW50Ijp7InZhbGlkIjp0cnVlLCJic3MiOiIyOTBmOGY0MzhjMTVhMjZiMmIxMjk0MTljMWU5ODYxZiJ9LCJpYXQiOjE1NDcxOTIzNjEsImV4cCI6MTU0NzE5NTk2MSwiaXNzIjoiaHR0cHM6Ly9pYW0ubmcuYmx1ZW1peC5uZXQvb2lkYy90b2tlbiIsImdyYW50X3R5cGUiOiJ1cm46aWJtOnBhcmFtczpvYXV0aDpncmFudC10eXBlOmFwaWtleSIsInNjb3BlIjoiaWJtIG9wZW5pZCIsImNsaWVudF9pZCI6ImRlZmF1bHQiLCJhY3IiOjEsImFtciI6WyJwd2QiXX0.IhYBWB6WJRR9Pi_S8hmEqXlqF9jrKdqCUF1O1-JXnjEli-O1EZNzfqevLFkgVuPLZ3FQpe0kaPRlDm9rmQsJ-93cbMrGEbLnOQMTrL3HpTqPQZJnmIJiJh6QSLYUFb6fBbEII_ydP56q3dLohXAfIyViW5S6p-PqEeuSCT5BW6kWiJdSTW4d1VUrxJ15HL2hOnxxL46izc9rIIV_nPqlMPQDKinK8vEvvD1xFag4wLEMmqYWiqrE8QFWYyR9rcCYPG7vLIFsQZf23fdx2qhjfFXXjqueVyeHjwzP9ED_i5vMpsjWOMFdgkFcacdcQcSRS3cqXoQUm5wyqOCsz6EKUQ”<br>-H “ibm-service-instance-id: f1f11fc4-939f-4896-9b53-f66a1661e14a” -H “ibm-<br>sse-kp-encryption-algorithm : AES256” -H “ibm-sse-kp-customer-root-key-crn :<br>crn:v1:bluemix:public:kms:us-<br>south:a/290f8f438c15a26b2b129419c1e9861f:25f403ed-3645-433d-b24c-40309c826856:key:da742336-a8ac-47cc-a1ee-3a1253344cb2”</p>
 
       
     </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/01/04/hello-world/" data-id="ck4z7x2i90000ncyz6zcsaxts" class="article-share-link">Share</a>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/blockstorage-tutorial/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/blockstorage-tutorial/" class="post-title-link" itemprop="url">blockstorage-tutorial</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:19:40 / 修改时间：17:20:48" itemprop="dateCreated datePublished" datetime="2020-01-04T17:19:40+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
+          <p>在Centor7上连接block storage, 并且设置backup  </p>
+<h2 id="创建block-storage"><a href="#创建block-storage" class="headerlink" title="创建block storage"></a>创建block storage</h2><p>blockstorage只能从IaaS平台上购买，可以根据自己的需求购买。</p>
+<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><h3 id="添加Authorize-Host"><a href="#添加Authorize-Host" class="headerlink" title="添加Authorize Host"></a>添加Authorize Host</h3><p>按照UI的指示可以为block storage添加Authorize Host。<br>注意，只能添加在同一个DC的host</p>
+<h3 id="Mounting-block-storage-volume"><a href="#Mounting-block-storage-volume" class="headerlink" title="Mounting block storage volume"></a>Mounting block storage volume</h3><p>我们使用的是CentOS7</p>
+<ol>
+<li><p>yum install iscsi-initiator-utils device-mapper-multipath</p>
+</li>
+<li><p>modprobe dm-multipath<br>systemctl start multipathd<br>systemctl enable multipathd</p>
+</li>
+<li><p>vi /etc/multipath.conf<br>multipath -ll</p>
+</li>
+<li><p>vi /etc/iscsi/initiatorname.iscsi<br>编辑 InitiatorName=， 其中InitiatorName是IQN</p>
+</li>
+<li><p>vi /etc/iscsi/iscsid.conf<br>编辑，value都可以从authorized Host得到<br>node.session.auth.authmethod = CHAP<br>node.session.auth.username =<br>node.session.auth.password =<br>discovery.sendtargets.auth.authmethod = CHAP<br>discovery.sendtargets.auth.username =<br>discovery.sendtargets.auth.password =</p>
+</li>
+<li><p>systemctl enable iscsi<br>systemctl enable iscsid<br>systemctl start iscsi<br>systemctl start iscsid</p>
+</li>
+<li><p>iscsiadm -m discovery -t sendtargets -p<br>其中ip-value-from-SL-Portal指的是block storage的IP，不要错误用了authorized host的ip<br>iscsiadm -m node -L automatic</p>
+</li>
+<li><p>verify<br>iscsiadm -m session<br>multipath -l<br>fdisk -l | grep /dev/mapper</p>
+</li>
+</ol>
+<h3 id="Creating-a-file-system-by-fdisk"><a href="#Creating-a-file-system-by-fdisk" class="headerlink" title="Creating a file system by fdisk"></a>Creating a file system by fdisk</h3><ol>
+<li><p>得到disk name<br>fdisk -l | grep /dev/mapper</p>
+</li>
+<li><p>生成 partition<br>fdisk /dev/mapper/XXX</p>
+</li>
+<li><p>生成file system在新的partition上<br>fdisk –l /dev/mapper/XXX<br>mkfs.ext3 /dev/mapper/XXXlp1<br>在执行格式化命令mkfs.ext3的时候，有时候会出现以下错误：<br>Could not stat /dev/mapper/3600a0980383030516e2b464b47755147p1 — No such file<br>or directory</p>
+</li>
+</ol>
+<p>The device apparently does not exist; did you specify it correctly?<br>我们用下面的方法解决：<br>首先rpm -qa | grep parted查看是否已经安装了partprobe命令<br>执行partprobe</p>
+<ol start="4">
+<li><p>mkdir /PerfDisk<br>mount /dev/mapper/XXXlp1 /PerfDisk<br>df -h</p>
+</li>
+<li><p>Add the new file system to the system’s /etc/fstab file to enable automatic mounting on boot<br>/etc/fstab<br>增加下面一行<br>/dev/mapper/XXXlp1 /PerfDisk ext3 defaults,_netdev 0 1</p>
+</li>
+</ol>
+<h3 id="Creating-a-file-system-by-parted"><a href="#Creating-a-file-system-by-parted" class="headerlink" title="Creating a file system by parted"></a>Creating a file system by parted</h3><p>parted<br>(parted) select /dev/mapper/XXX<br>(parted) print<br>(parted) mklabel gpt<br>(parted) mkpart<br>(parted) quit<br>mkfs.ext3 /dev/mapper/XXXlp1<br>mkdir /PerfDisk<br>mount /dev/mapper/XXXlp1 /PerfDisk<br>df -h</p>
+<h2 id="错误排查"><a href="#错误排查" class="headerlink" title="错误排查"></a>错误排查</h2><ol>
+<li><p>检查multipath To check whether multipath is picking up the devices, list the devices. If it’s configured correct, only two NETAPP devices show up.<br>multipath -l</p>
+</li>
+<li><p>检查disks<br>fdisk -l | grep Disk<br>有两个disks有同样的identifier，并且/dev/mapper显示有同样的大小。<br>如果只是现实了sd*, 而没有显示/dev/mapper，表示没有正确的set up</p>
+</li>
+</ol>
+<h2 id="snapshots-space"><a href="#snapshots-space" class="headerlink" title="snapshots space"></a>snapshots space</h2><h3 id="order-snapshot-space"><a href="#order-snapshot-space" class="headerlink" title="order snapshot space"></a>order snapshot space</h3><p>在order snapshot 的时候，并没有选择是endurance或者performance，而是只询问了大小。Snapshot space is<br>directly tied to the source volume so if it’s performance it comes from<br>performance</p>
+<h3 id="手工snapshot"><a href="#手工snapshot" class="headerlink" title="手工snapshot"></a>手工snapshot</h3><p>直接在portal上可以完成</p>
+<h3 id="snapshot-schedule"><a href="#snapshot-schedule" class="headerlink" title="snapshot schedule"></a>snapshot schedule</h3><p>直接在portal上可以完成</p>
+<h2 id="unmount"><a href="#unmount" class="headerlink" title="unmount"></a>unmount</h2><p>##修改cPanel的backup到blockstorage<br>假设mount point为backup2<br>rsync -azv /backup/* /backup2/<br>登陆到WHM， Home &gt; Backup &gt; Backup Configuration.<br>修改2处：</p>
+<ol>
+<li>default backup directory</li>
+<li>Enable to mount a backup drive</li>
+</ol>
+<p>##Lun<br>iscsiadm -m session -P 3<br>multipath -ll</p>
+
       
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/cos-s3fs/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/cos-s3fs/" class="post-title-link" itemprop="url">cos s3fs</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:18:42 / 修改时间：17:23:15" itemprop="dateCreated datePublished" datetime="2020-01-04T17:18:42+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>s3fs命令</p>
+<p>Applications that expect to read and write to a NFS-style filesystem can use<br>s3fs, which can mount a bucket as directory while preserving the native object<br>format for files. This allows you to interact with your cloud storage using<br>familiar shell commands, like ls for listing or cp to copy files, as well as<br>providing access to legacy applications that rely on reading and writing from<br>local files. For a more detailed overview, visit the project’s official<br>README.</p>
+<p>本文将学习如何将一个cos的bucket mount为文件系统。</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>brew cask install osxfuse<br>brew install s3fs</p>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><h3 id="得到credential文件"><a href="#得到credential文件" class="headerlink" title="得到credential文件"></a>得到credential文件</h3><p>可以是HMAC或者IAM API KEY</p>
+<h4 id="HMAC-credential文件"><a href="#HMAC-credential文件" class="headerlink" title="HMAC credential文件"></a>HMAC credential文件</h4><p>从IBM Cloud中的COS instance-&gt;Service Credentials获得cos_hmac_keys。存储到一个文件中：<br>格式如下：</p>
+<p><access_key>:<secret_key></p>
+<h3 id="运行命令挂载"><a href="#运行命令挂载" class="headerlink" title="运行命令挂载"></a>运行命令挂载</h3><p>s3fs  -o url=http{s}:// –o passwd_file=<credentials_file><br>其中bucket为cos里面需要挂载的bucket。mountpoint为local file的地址（绝对地址），endpoint可以在IBM<br>Cloud的cos里面找到，对应为bucket所在的endpoint。credentials_file就是刚才保存的文件。<br>运行后可以执行<br><code>df -h</code> 查看挂载结果</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/NumPy-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/NumPy-start/" class="post-title-link" itemprop="url">NumPy start</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:17:33 / 修改时间：17:18:10" itemprop="dateCreated datePublished" datetime="2020-01-04T17:17:33+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>从零开始学习NumPy</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="什么是NumPy"><a href="#什么是NumPy" class="headerlink" title="什么是NumPy"></a>什么是NumPy</h3><p>作为初级学习者，没有什么Python经验，一开始就来学习NumPy，不知道中间会遇到什么拦路虎，走着看吧，需要补什么就抓过来啃啃。</p>
+<p>首先，发音。“南派”记住了，别读成“努屁”了。好，现在开始记录什么是NumPy。根据官方法典的记载，NumPy是Python中科学计算的基础软件包。ok，少不了要补一些Python的语法知识。还有一个要点，NumPy是一个软件包。软件包按我的理解就是把一大堆对象、函数、API什么都统统封装在一起，用一些简单的调用就能完成一个复杂的事情。那么看看NumPy里都封装了些什么。</p>
+<ul>
+<li>数组</li>
+<li>对数组的操作函数</li>
+</ul>
+<p>基本上就是这两个东东吧。“NumPy提供多维数组对象，多种派生对象（如掩码数组、矩阵），以及用于快速操作数组的函数及API“。包括：</p>
+<ul>
+<li>数学</li>
+<li>逻辑</li>
+<li>数组形状变换</li>
+<li>排序</li>
+<li>选择</li>
+<li>I/O</li>
+<li>离散傅立叶变换</li>
+<li>基本线性代数</li>
+<li>基本统计运算</li>
+<li>随机模拟</li>
+</ul>
+<p>先暂且这么罗列着吧，究竟是什么东西，慢慢深入好了。所以“科学计算”大白话就是从高中到大学你所学到的代数、高数、等等跟数学有关的东西。有没有例外？不知道。</p>
+<h3 id="和Python原生数组array的区别"><a href="#和Python原生数组array的区别" class="headerlink" title="和Python原生数组array的区别"></a>和Python原生数组array的区别</h3><p>说到NumPy的核心，就是数组。那NumPy来自于Python，和Python的原生数组有什么联系和区别呢？带着这个问题，我们先看看NumPy的数组具体是啥。官方来源<br>“NumPy封装了python原生的同数据类型的n维数组，为了保证其性能优良，其中有许多操作都是代码在本地进行编译后执行的”。抓要点，1，<br>NumPy对Python原生数组进行了封装，并且改良和加固了n维数组的封装。2，n维数组是同数据类型的。3，改良了性能。</p>
+<p>具体展开说一下区别：</p>
+<ul>
+<li>NumPy数组在创建时具有固定的大小，与Python的原生数组对象（可以动态增长）不同。 更改ndarray的大小将创建一个新数组并删除原来的数组。</li>
+<li>NumPy数组中的元素都需要具有相同的数据类型，因此在内存中的大小相同。 例外情况：Python的原生数组里包含了NumPy的对象的时候，这种情况下就允许不同大小元素的数组。</li>
+<li>NumPy数组有助于对大量数据进行高级数学和其他类型的操作。 通常，这些操作的执行效率更高，比使用Python原生数组的代码更少。</li>
+<li>越来越多的基于Python的科学和数学软件包使用NumPy数组; 虽然这些工具通常都支持Python的原生数组作为参数，但它们在处理之前会还是会将输入的数组转换为NumPy的数组，而且也通常输出为NumPy数组。 换句话说，为了高效地使用当今科学/数学基于Python的工具（大部分的科学计算工具），你只知道如何使用Python的原生数组类型是不够的 - 还需要知道如何使用NumPy数组。</li>
+</ul>
+<p>划重点：</p>
+<ol>
+<li>NumPy数组固定大小</li>
+<li>NumPy数组的元素数据类型相同</li>
+<li>NumPy数组很重要！！！</li>
+</ol>
+<h2 id="NumPy安装"><a href="#NumPy安装" class="headerlink" title="NumPy安装"></a>NumPy安装</h2><p>工欲善其事必先利其器。看一下想使用NumPy要做些什么事情。<br>推荐方案：在操作系统上安装NumPy<br>重点说Pip和Mac怎么安装</p>
+<h3 id="Pip"><a href="#Pip" class="headerlink" title="Pip"></a>Pip</h3><p>先决条件，在机器上安装好Python和Pip<br>接下来这行命令就是安装NumPy</p>
+<blockquote>
+<p>python -m pip install –user numpy scipy matplotlib ipython jupyter pandas<br>sympy nose</p>
+</blockquote>
+<h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><blockquote>
+<p>brew tap homebrew/science &amp;&amp; brew install python numpy scipy matplotlib</p>
+</blockquote>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><p>例1，3D空间的点坐标[1,2,1]。rank = 1, axis = 3。ndim = 1, shape=(3,)<br>解读：axis是纬度或者轴，3D是三维的，所以轴的长度为3。rank是轴的数目，它只有一个轴，所以轴的数目为1。</p>
+<p>例2，n行m列的矩阵，ndim=n, shape=（n,m），size=n*m</p>
+<p>例3，[[ 0, 1, 2, 3, 4],<br>[ 5, 6, 7, 8, 9],<br>[10, 11, 12, 13, 14]]，<br>ndim = 2, shape = (3, 5)</p>
+<p>NumPy的数组类为ndarray，别名array。在这里要区别numpy.array和Python类库的array.array是不一样的，array.array只处理一维数组。</p>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><blockquote>
+<p>import numpy as np<br>a = np.array([2,3,4])<br>b = np.array([(1.5,2,3), (4,5,6)])<br>c = np.array( [ [1,2], [3,4] ], dtype=complex )<br>np.zeros( (3,4) )<br>np.ones( (2,3,4), dtype=np.int16 )<br>np.empty( (2,3) )<br>np.arange( 10, 30, 5 )<br>np.linspace( 0, 2, 9 )</p>
+</blockquote>
+<p>详解<br>np.array: 将序列的序列转换成二维数组，将序列的序列的序列转换成三维数组，输入的是数列<br>np.zeros: 创建一个由0组成的数组,输入的是shape<br>np.ones：创建一个由1数组的数组，输入的是shape<br>np.empty：内容是随机的并且取决于存储器的状态，输入的是shape<br>np.arange：该函数返回数组而不是列表，输入的是起始值，终止值，步长<br>np.linspace：和arrange函数类似，但它接收我们想要的元素数量而不是步长作为参数</p>
+<h3 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h3><blockquote>
+<p>print(a)</p>
+</blockquote>
+<p>如果数组太大而无法打印，NumPy将自动跳过数组的中心部分并仅打印角点<br>要禁用此行为并强制NumPy打印整个数组，你可以使用 set_printoptions 更改打印选项</p>
+<h3 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h3><p>数组上的算术运算符使用元素级别。计算结果会产生一个新的数组，并在每个元素上进行计算并填充到新的数组上。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/git-fork-and-sign-off/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/git-fork-and-sign-off/" class="post-title-link" itemprop="url">git fork and sign-off</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:16:28 / 修改时间：17:17:01" itemprop="dateCreated datePublished" datetime="2020-01-04T17:16:28+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Github项目的fork和sign off操作</p>
+<p>有些官方的项目是需要开发者fork到自己的仓库的。本文就是介绍一下整个流程。假设小A是一位开发者，它要在公开的Github仓库继续开发一些新feature。</p>
+<h2 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h2><p>小A首先要fork官方的Github仓库。点击Fork按钮，选择fork到自己的那个仓库里。</p>
+<h2 id="clone到本地"><a href="#clone到本地" class="headerlink" title="clone到本地"></a>clone到本地</h2><blockquote>
+<p>git clone -b some-feature<br>git add .<br>git commit -am “initial”</p>
+</blockquote>
+<h2 id="push"><a href="#push" class="headerlink" title="push"></a>push</h2><p>小A将feature分支推送到自己的GitHub仓库</p>
+<blockquote>
+<p>git push origin some-branch</p>
+</blockquote>
+<h2 id="pull-request"><a href="#pull-request" class="headerlink" title="pull request"></a>pull request</h2><p>小A来到他fork的官方仓库，点击项目的new pull request。创建一个pull request。设置好源仓库和源分支（自己的仓库和some-<br>branch），目标仓库和目标分支（官方仓库和分支）。</p>
+<p>提供一个pull request的标题和间接</p>
+<h2 id="sign-off"><a href="#sign-off" class="headerlink" title="sign off"></a>sign off</h2><p>有些官方项目是需要sign off的。</p>
+<blockquote>
+<p>git commit -s<br>如果忘记sign off了，可以为上一个commit追加sign off<br>git commit –amend -s<br>git push -f</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/tensorflow-beginner/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/tensorflow-beginner/" class="post-title-link" itemprop="url">tensorflow beginner</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:15:21 / 修改时间：17:16:06" itemprop="dateCreated datePublished" datetime="2020-01-04T17:15:21+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Start with TensorFlow</p>
+<h2 id="install-Tensorflow-with-Anaconda"><a href="#install-Tensorflow-with-Anaconda" class="headerlink" title="install Tensorflow with Anaconda"></a>install Tensorflow with Anaconda</h2><p>create tensorflow environment</p>
+<blockquote>
+<p>$ conda create -n tensorflow pip python=2.7 # or python=3.3, etc.</p>
+</blockquote>
+<p>Switch the environment</p>
+<blockquote>
+<p>$ source activate tensorflow</p>
+</blockquote>
+<p>Issue a command of the following format to install TensorFlow inside your<br>conda environment:</p>
+<blockquote>
+<p>(targetDirectory)$ pip install –ignore-installed –upgrade TF_PYTHON_URL</p>
+<p>(targetDirectory)$ pip install –ignore-installed –upgrade</p>
+</blockquote>
+<p>&lt;<a href="https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py2-none-" target="_blank" rel="noopener">https://storage.googleapis.com/tensorflow/mac/cpu/tensorflow-1.8.0-py2-none-</a><br>any.whl&gt;</p>
+<h2 id="validate-the-installation"><a href="#validate-the-installation" class="headerlink" title="validate the installation"></a>validate the installation</h2><blockquote>
+<p>$ python</p>
+<p>import tensorflow as tf</p>
+<p>hello = tf.constant(‘Hello, TensorFlow!’)</p>
+<p>sess = tf.Session()</p>
+<p>print(sess.run(hello))</p>
+</blockquote>
+<p>The output should be:</p>
+<blockquote>
+<p>Hello, TensorFlow!</p>
+</blockquote>
+<h2 id="install-nltk-error"><a href="#install-nltk-error" class="headerlink" title="install nltk error"></a>install nltk error</h2><p>Resource punkt not found.</p>
+<p>Please use the NLTK Downloader to obtain the resource:</p>
+<p>import nltk</p>
+<p>nltk.download(‘punkt’)</p>
+<blockquote>
+<p>python</p>
+<p>import nltk</p>
+<p>nltk.download</p>
+</blockquote>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/problems-with-conda/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/problems-with-conda/" class="post-title-link" itemprop="url">problems with conda</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:14:12 / 修改时间：17:14:57" itemprop="dateCreated datePublished" datetime="2020-01-04T17:14:12+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>Summaries for the issues happened with conda</p>
+<h2 id="conda-activate-not-working-after-conda-update-to-latest-version"><a href="#conda-activate-not-working-after-conda-update-to-latest-version" class="headerlink" title="conda activate not working after conda update to latest version"></a>conda activate not working after conda update to latest version</h2><p>if using ZSH, follow below steps:</p>
+<ul>
+<li>open up your .zshrc file usually in your home directory. if you use vim enter vim ~/.zshrc</li>
+<li>remove export PATH=~/anaconda3/bin:$PATH from your .zshrc file</li>
+<li>add this line . /Users/ROOT_USER_HERE/anaconda3/etc/profile.d/conda.sh to your .zshrc file</li>
+</ul>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/Anaconda-python-config/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/Anaconda-python-config/" class="post-title-link" itemprop="url">Anaconda python config</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:13:10 / 修改时间：17:13:44" itemprop="dateCreated datePublished" datetime="2020-01-04T17:13:10+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>We can use Anaconda to config Python environment which is using for Deep<br>learning. We introduce some general configuration and setups for Anaconda and<br>Python in MacOS.</p>
+<h2 id="Conda"><a href="#Conda" class="headerlink" title="Conda"></a>Conda</h2><h3 id="verify-conda-installation"><a href="#verify-conda-installation" class="headerlink" title="verify conda installation"></a>verify conda installation</h3><blockquote>
+<p>$ conda –version</p>
+</blockquote>
+<blockquote>
+<p>conda 4.5.4</p>
+</blockquote>
+<h3 id="update-conda-to-latest-version"><a href="#update-conda-to-latest-version" class="headerlink" title="update conda to latest version"></a>update conda to latest version</h3><blockquote>
+<p>$ conda update conda</p>
+</blockquote>
+<h3 id="create-or-activate-environment"><a href="#create-or-activate-environment" class="headerlink" title="create or activate environment"></a>create or activate environment</h3><blockquote>
+<p>$ conda create –name snowflake biopython</p>
+</blockquote>
+<p>this command will create a new environment for biopython library, the location<br>is /envs/snowflakes. –name can be replaces by -n, which has the same<br>functionality. Can check <code>conda -h</code> for help.</p>
+<blockquote>
+<p>$ conda create -n bunnies python=3 Astroid Babel</p>
+</blockquote>
+<p>This command create a second environment to include Astroid and Babel lib<br>based on python 3, the name is bunnies, which include in /envs/bunnies.</p>
+<blockquote>
+<p>$ source activate snowflakes</p>
+</blockquote>
+<p>This command activate the environment</p>
+<blockquote>
+<p>$ conda info -e</p>
+</blockquote>
+<p>The current environment has a * at the beginning of location</p>
+<blockquote>
+<p>$ source activate base</p>
+</blockquote>
+<p>switch to another environment</p>
+<blockquote>
+<p>$ source deactivate</p>
+</blockquote>
+<p>switch to root folder of the system</p>
+<blockquote>
+<p>$ conda create -n flowers –clone snowflakes</p>
+</blockquote>
+<p>copy the environment snowflakes and name as flowers</p>
+<blockquote>
+<p>$ conda remove -n flowers –all</p>
+</blockquote>
+<p>remove the environment flowers</p>
+<h3 id="manage-Python-with-conda"><a href="#manage-Python-with-conda" class="headerlink" title="manage Python with conda"></a>manage Python with conda</h3><blockquote>
+<p>$ conda search –full –name python</p>
+</blockquote>
+<p>seach for all libs with “python”</p>
+<blockquote>
+<p>$ python –version</p>
+</blockquote>
+<p>check for the versions in the environment<br>note: if you have alias in ~/.zshrc, you should remove it<br>and make sure to use <code>source activate</code> to switch to the environment before<br>using python command</p>
+<blockquote>
+<p>$ conda list</p>
+</blockquote>
+<p>check which python version or other applications installed in this environment</p>
+<blockquote>
+<p>$ conda install –name bunnies beautifulsoup4</p>
+</blockquote>
+<p>This command will install a new lib to environment bunnies. Make sure you<br>specify the environment name with –name, or else the lib will be installed to<br>current environment.</p>
+<blockquote>
+<p>$ conda search beautifulsoup4</p>
+</blockquote>
+<p>To check whether beautifulsoup4 can be installed by conda.</p>
+<p>Note: if the lib cannot be installed by conda, you can search from<br>Anaconda.org</p>
+<blockquote>
+<p>$ conda install –channel <a href="https://conda.anaconda.org/pandas" target="_blank" rel="noopener">https://conda.anaconda.org/pandas</a> bottleneck</p>
+</blockquote>
+<p>Note: if the lib cannot be installed by conda or from Anaconda.org, you can<br>use <code>pip install</code>, make sure to switch to then environment before install lib.</p>
+<h3 id="remove"><a href="#remove" class="headerlink" title="remove"></a>remove</h3><blockquote>
+<p>$ conda remove -n bunnies iopro</p>
+</blockquote>
+<p>This command will remove iopro lib from bunnies environment</p>
+<blockquote>
+<p>$ conda remove -n snakes –all</p>
+</blockquote>
+<p>This command will remove snakes environment</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/Proxy-setup/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/Proxy-setup/" class="post-title-link" itemprop="url">Proxy setup</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:11:34 / 修改时间：17:12:44" itemprop="dateCreated datePublished" datetime="2020-01-04T17:11:34+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>The purpose of this blog is to sort out the setup of proxy in MacOS</p>
+<h2 id="ShadowSocks"><a href="#ShadowSocks" class="headerlink" title="ShadowSocks"></a>ShadowSocks</h2><h3 id="using-single-container"><a href="#using-single-container" class="headerlink" title="using single container"></a>using single container</h3><blockquote>
+<p>docker pull oddrationale/docker-shadowsocks</p>
+<p>docker run -d -p 2022:2022 oddrationale/docker-shadowsocks -s 0.0.0.0 -p<br>2022 -k admin -m aes-256-cfb</p>
+</blockquote>
+<h3 id="kubenetes"><a href="#kubenetes" class="headerlink" title="kubenetes"></a>kubenetes</h3><ul>
+<li>deploy with a simple image</li>
+<li>execute below command</li>
+</ul>
+<blockquote>
+<p>kubectl exec -it  /bin/bash</p>
+<p>apt-get update &amp;&amp; apt-get install -y python-pip libsodium18</p>
+<p>pip install shadowsocks==2.8.2</p>
+</blockquote>
+<ul>
+<li>execute below command</li>
+</ul>
+<blockquote>
+<p>ssserver -p 1982 -k admin -m aes-256-cfb –user nobody -d start</p>
+</blockquote>
+<ul>
+<li>expose port</li>
+</ul>
+<blockquote>
+<p>kubectl expose deployment/shadowsocks –type=NodePort –port=1982<br>–name=shadowsocks –target-port=1982</p>
+</blockquote>
+<h3 id="shadowsocks-client-config"><a href="#shadowsocks-client-config" class="headerlink" title="shadowsocks client config"></a>shadowsocks client config</h3><p>open server preferences -&gt; + -&gt; Address: [public ip]:port -&gt; aes-256-cfb -&gt;<br>Password: admin</p>
+<p>set to use Auto proxy mode</p>
+<h2 id="sshpass"><a href="#sshpass" class="headerlink" title="sshpass"></a>sshpass</h2><blockquote>
+<p>sshpass -p [password] ssh -t -t -o StrictHostKeychecking=no -D [port]<br>[hostname]</p>
+</blockquote>
+<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>Http proxy for current command window</p>
+<p><code>$ export http_proxy=http://127.0.0.1:8118</code></p>
+<p><code>$ export https_proxy=http://127.0.0.1:8118</code></p>
+<p>Socks5 proxy for current command window</p>
+<p><code>$ export http_proxy=socks5://127.0.0.1:8118</code></p>
+<p><code>$ export https_proxy=socks5://127.0.0.1:8118</code></p>
+<p>for wget and curl to use socks5</p>
+<p><code>$ export ALL_PROXY=socks5://127.0.0.1:8118</code></p>
+<p>Cancel the proxy</p>
+<p><code>$ unset http_proxy</code></p>
+<p><code>$ unset http_proxy</code></p>
+<p><code>$ unset ALL_PROXY</code></p>
+<p>Set permanently in ~/.zshrc</p>
+<blockquote>
+<p>alias proxy_https = “export https_proxy=socks5://127.0.0.1:8118”</p>
+</blockquote>
+<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><blockquote>
+<p>git config –global http.proxy <a href="http://127.0.0.1:8118" target="_blank" rel="noopener">http://127.0.0.1:8118</a></p>
+<p>git config –global https.proxy <a href="http://127.0.0.1:8118" target="_blank" rel="noopener">http://127.0.0.1:8118</a></p>
+</blockquote>
+<p>or socks:</p>
+<blockquote>
+<p>git config –global http.proxy socks5://127.0.0.1:1080</p>
+<p>git config –global https.proxy socks5://127.0.0.1:1080</p>
+</blockquote>
+<p>cancel:</p>
+<blockquote>
+<p>git config –global –unset http.proxy</p>
+<p>git config –global –unset https.proxy</p>
+</blockquote>
+<h2 id="IPsec-L2TP-on-CentOS"><a href="#IPsec-L2TP-on-CentOS" class="headerlink" title="IPsec/L2TP on CentOS"></a>IPsec/L2TP on CentOS</h2><p>yum install wget<br>wget <a href="https://git.io/vpnsetup-centos" target="_blank" rel="noopener">https://git.io/vpnsetup-centos</a> -O vpnsetup.sh &amp;&amp; sudo sh vpnsetup.sh</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/setup-github-blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/04/setup-github-blog/" class="post-title-link" itemprop="url">使用GitHub Page搭建个人博客</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 16:53:48 / 修改时间：17:10:45" itemprop="dateCreated datePublished" datetime="2020-01-04T16:53:48+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>GitHub Pages可以让网站直接托管在GitHub的服务器上，更新维护网站内容很简单，用git commit + git<br>push即可进行维护，因为GitHub Pages就是GitHub上的一个Git代码仓库。</p>
+<h2 id="GitHub-io"><a href="#GitHub-io" class="headerlink" title="GitHub.io"></a>GitHub.io</h2><p>创建一个代码仓库，命名为sallymi.github.io<br>Clone代码仓库到本地</p>
+<blockquote>
+<p>$ git clone <a href="https://github.com/sallymi/sallymi.github.io" target="_blank" rel="noopener">https://github.com/sallymi/sallymi.github.io</a></p>
+<p>$ cd sallymi.github.io</p>
+<p>$ echo “Hello World” &gt; index.html</p>
+<p>$ git add .</p>
+<p>$ git commit -am “Initial commit”</p>
+<p>$ git push</p>
+</blockquote>
+<p>访问sallymi.github.io</p>
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h3><blockquote>
+<p>$ npm install -g hexo-cli</p>
+<p>$ hexo init myblog</p>
+<p>$ cd myblog</p>
+<p>$ npm install</p>
+</blockquote>
+<h3 id="运行Hexo"><a href="#运行Hexo" class="headerlink" title="运行Hexo"></a>运行Hexo</h3><blockquote>
+<p>$ hexo s</p>
+</blockquote>
+<p>输出如下</p>
+<blockquote>
+<p>INFO Start processing</p>
+<p>INFO Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.</p>
+</blockquote>
+<p>浏览器访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到默认主题风格的博客了。</p>
+<h3 id="发布到GitHub-Pages"><a href="#发布到GitHub-Pages" class="headerlink" title="发布到GitHub Pages"></a>发布到GitHub Pages</h3><p>在myblog/_config.yml里修改：</p>
+<blockquote>
+<p>deploy:</p>
+<p>type: git</p>
+<p>repo: <a href="mailto:git@github.com">git@github.com</a>:sallymi/sallymi.github.io.git</p>
+<p>branch: master</p>
+</blockquote>
+<p>命令行出错的话需要安装</p>
+<blockquote>
+<p>$ npm install hexo-deployer-git –save</p>
+</blockquote>
+<p>发布命令：</p>
+<blockquote>
+<p>$ hexo d -g</p>
+</blockquote>
+<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><blockquote>
+<p>$ hexo n ‘name’</p>
+</blockquote>
+<h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h3><blockquote>
+<p>cd myblog</p>
+<p>git clone <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> themes/next</p>
+</blockquote>
+<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>在_config.yml里面修改</p>
+<blockquote>
+<p>theme: next</p>
+</blockquote>
+<h3 id="配置Next主题"><a href="#配置Next主题" class="headerlink" title="配置Next主题"></a>配置Next主题</h3><ul>
+<li>选择Schema<br><br>四种可以选择:</li>
+</ul>
+<p>Muse, Mist, Pisces, Gemini</p>
+<ul>
+<li>设置语言</li>
+</ul>
+<blockquote>
+<p>language: zh-Hans</p>
+</blockquote>
+<ul>
+<li>设置菜单</li>
+</ul>
+<p>对应字段是menu。菜单内容的设置格式是：item name: link。其中 item name<br>是一个名称，这个名称并不直接显示在页面上，它将用于匹配图标以及翻译。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+  </div>
+
+  
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right" aria-label="下一页"></i></a>
+  </nav>
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sally</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sally</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
     </footer>
   </div>
-  
-</article>
-
 
   
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
 
 
-</section>
-        
-          <aside id="sidebar">
-  
-    
+<script src="/js/schemes/muse.js"></script>
 
-  
-    
 
-  
-    
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/01/">January 2020</a></li></ul>
-    </div>
-  </div>
+<script src="/js/next-boot.js"></script>
+
+
 
 
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recent Posts</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2020/01/04/hello-world/">Hello World</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
 
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2020 John Doe<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
 
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+
 
 
   
-<link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
 
   
-<script src="/fancybox/jquery.fancybox.pack.js"></script>
 
-
-
-
-<script src="/js/script.js"></script>
-
-
-
-
-  </div>
 </body>
 </html>

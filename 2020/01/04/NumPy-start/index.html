@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+
+
+<script id="hexo-configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    hostname: new URL('https://sallymi.github.io').hostname,
+    root: '/',
+    scheme: 'Mist',
+    version: '7.7.0',
+    exturl: false,
+    sidebar: {"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},
+    copycode: {"enable":false,"show_result":false,"style":null},
+    back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
+    bookmark: {"enable":false,"color":"#222","save":"auto"},
+    fancybox: false,
+    mediumzoom: false,
+    lazyload: false,
+    pangu: false,
+    comments: {"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},
+    algolia: {
+      appID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    },
+    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: '',
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}
+  };
+</script>
+
+  <meta name="description" content="从零开始学习NumPy 介绍什么是NumPy作为初级学习者，没有什么Python经验，一开始就来学习NumPy，不知道中间会遇到什么拦路虎，走着看吧，需要补什么就抓过来啃啃。 首先，发音。“南派”记住了，别读成“努屁”了。好，现在开始记录什么是NumPy。根据官方法典的记载，NumPy是Python中科学计算的基础软件包。ok，少不了要补一些Python的语法知识。还有一个要点，NumPy是一个软">
+<meta property="og:type" content="article">
+<meta property="og:title" content="NumPy start">
+<meta property="og:url" content="https://sallymi.github.io/2020/01/04/NumPy-start/index.html">
+<meta property="og:site_name" content="Sally&#39;s blog">
+<meta property="og:description" content="从零开始学习NumPy 介绍什么是NumPy作为初级学习者，没有什么Python经验，一开始就来学习NumPy，不知道中间会遇到什么拦路虎，走着看吧，需要补什么就抓过来啃啃。 首先，发音。“南派”记住了，别读成“努屁”了。好，现在开始记录什么是NumPy。根据官方法典的记载，NumPy是Python中科学计算的基础软件包。ok，少不了要补一些Python的语法知识。还有一个要点，NumPy是一个软">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-01-04T09:17:33.000Z">
+<meta property="article:modified_time" content="2020-01-04T09:18:10.238Z">
+<meta property="article:author" content="Sally">
+<meta property="article:tag" content="python">
+<meta property="article:tag" content="numpy">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://sallymi.github.io/2020/01/04/NumPy-start/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome: false,
+    isPost: true
+  };
+</script>
+
+  <title>NumPy start | Sally's blog</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-meta">
+
+    <div>
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Sally's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+  </div>
+
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+</div>
+
+
+<nav class="site-nav">
+  
+  <ul id="menu" class="menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-fw fa-home"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
+
+  </li>
+  </ul>
+
+</nav>
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content">
+            
+
+  <div class="posts-expand">
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/NumPy-start/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          NumPy start
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-04 17:17:33 / 修改时间：17:18:10" itemprop="dateCreated datePublished" datetime="2020-01-04T17:17:33+08:00">2020-01-04</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>从零开始学习NumPy</p>
+<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><h3 id="什么是NumPy"><a href="#什么是NumPy" class="headerlink" title="什么是NumPy"></a>什么是NumPy</h3><p>作为初级学习者，没有什么Python经验，一开始就来学习NumPy，不知道中间会遇到什么拦路虎，走着看吧，需要补什么就抓过来啃啃。</p>
+<p>首先，发音。“南派”记住了，别读成“努屁”了。好，现在开始记录什么是NumPy。根据官方法典的记载，NumPy是Python中科学计算的基础软件包。ok，少不了要补一些Python的语法知识。还有一个要点，NumPy是一个软件包。软件包按我的理解就是把一大堆对象、函数、API什么都统统封装在一起，用一些简单的调用就能完成一个复杂的事情。那么看看NumPy里都封装了些什么。</p>
+<ul>
+<li>数组</li>
+<li>对数组的操作函数</li>
+</ul>
+<p>基本上就是这两个东东吧。“NumPy提供多维数组对象，多种派生对象（如掩码数组、矩阵），以及用于快速操作数组的函数及API“。包括：</p>
+<ul>
+<li>数学</li>
+<li>逻辑</li>
+<li>数组形状变换</li>
+<li>排序</li>
+<li>选择</li>
+<li>I/O</li>
+<li>离散傅立叶变换</li>
+<li>基本线性代数</li>
+<li>基本统计运算</li>
+<li>随机模拟</li>
+</ul>
+<p>先暂且这么罗列着吧，究竟是什么东西，慢慢深入好了。所以“科学计算”大白话就是从高中到大学你所学到的代数、高数、等等跟数学有关的东西。有没有例外？不知道。</p>
+<h3 id="和Python原生数组array的区别"><a href="#和Python原生数组array的区别" class="headerlink" title="和Python原生数组array的区别"></a>和Python原生数组array的区别</h3><p>说到NumPy的核心，就是数组。那NumPy来自于Python，和Python的原生数组有什么联系和区别呢？带着这个问题，我们先看看NumPy的数组具体是啥。官方来源<br>“NumPy封装了python原生的同数据类型的n维数组，为了保证其性能优良，其中有许多操作都是代码在本地进行编译后执行的”。抓要点，1，<br>NumPy对Python原生数组进行了封装，并且改良和加固了n维数组的封装。2，n维数组是同数据类型的。3，改良了性能。</p>
+<p>具体展开说一下区别：</p>
+<ul>
+<li>NumPy数组在创建时具有固定的大小，与Python的原生数组对象（可以动态增长）不同。 更改ndarray的大小将创建一个新数组并删除原来的数组。</li>
+<li>NumPy数组中的元素都需要具有相同的数据类型，因此在内存中的大小相同。 例外情况：Python的原生数组里包含了NumPy的对象的时候，这种情况下就允许不同大小元素的数组。</li>
+<li>NumPy数组有助于对大量数据进行高级数学和其他类型的操作。 通常，这些操作的执行效率更高，比使用Python原生数组的代码更少。</li>
+<li>越来越多的基于Python的科学和数学软件包使用NumPy数组; 虽然这些工具通常都支持Python的原生数组作为参数，但它们在处理之前会还是会将输入的数组转换为NumPy的数组，而且也通常输出为NumPy数组。 换句话说，为了高效地使用当今科学/数学基于Python的工具（大部分的科学计算工具），你只知道如何使用Python的原生数组类型是不够的 - 还需要知道如何使用NumPy数组。</li>
+</ul>
+<p>划重点：</p>
+<ol>
+<li>NumPy数组固定大小</li>
+<li>NumPy数组的元素数据类型相同</li>
+<li>NumPy数组很重要！！！</li>
+</ol>
+<h2 id="NumPy安装"><a href="#NumPy安装" class="headerlink" title="NumPy安装"></a>NumPy安装</h2><p>工欲善其事必先利其器。看一下想使用NumPy要做些什么事情。<br>推荐方案：在操作系统上安装NumPy<br>重点说Pip和Mac怎么安装</p>
+<h3 id="Pip"><a href="#Pip" class="headerlink" title="Pip"></a>Pip</h3><p>先决条件，在机器上安装好Python和Pip<br>接下来这行命令就是安装NumPy</p>
+<blockquote>
+<p>python -m pip install –user numpy scipy matplotlib ipython jupyter pandas<br>sympy nose</p>
+</blockquote>
+<h3 id="Homebrew"><a href="#Homebrew" class="headerlink" title="Homebrew"></a>Homebrew</h3><blockquote>
+<p>brew tap homebrew/science &amp;&amp; brew install python numpy scipy matplotlib</p>
+</blockquote>
+<h2 id="快速入门"><a href="#快速入门" class="headerlink" title="快速入门"></a>快速入门</h2><p>例1，3D空间的点坐标[1,2,1]。rank = 1, axis = 3。ndim = 1, shape=(3,)<br>解读：axis是纬度或者轴，3D是三维的，所以轴的长度为3。rank是轴的数目，它只有一个轴，所以轴的数目为1。</p>
+<p>例2，n行m列的矩阵，ndim=n, shape=（n,m），size=n*m</p>
+<p>例3，[[ 0, 1, 2, 3, 4],<br>[ 5, 6, 7, 8, 9],<br>[10, 11, 12, 13, 14]]，<br>ndim = 2, shape = (3, 5)</p>
+<p>NumPy的数组类为ndarray，别名array。在这里要区别numpy.array和Python类库的array.array是不一样的，array.array只处理一维数组。</p>
+<h3 id="创建"><a href="#创建" class="headerlink" title="创建"></a>创建</h3><blockquote>
+<p>import numpy as np<br>a = np.array([2,3,4])<br>b = np.array([(1.5,2,3), (4,5,6)])<br>c = np.array( [ [1,2], [3,4] ], dtype=complex )<br>np.zeros( (3,4) )<br>np.ones( (2,3,4), dtype=np.int16 )<br>np.empty( (2,3) )<br>np.arange( 10, 30, 5 )<br>np.linspace( 0, 2, 9 )</p>
+</blockquote>
+<p>详解<br>np.array: 将序列的序列转换成二维数组，将序列的序列的序列转换成三维数组，输入的是数列<br>np.zeros: 创建一个由0组成的数组,输入的是shape<br>np.ones：创建一个由1数组的数组，输入的是shape<br>np.empty：内容是随机的并且取决于存储器的状态，输入的是shape<br>np.arange：该函数返回数组而不是列表，输入的是起始值，终止值，步长<br>np.linspace：和arrange函数类似，但它接收我们想要的元素数量而不是步长作为参数</p>
+<h3 id="打印"><a href="#打印" class="headerlink" title="打印"></a>打印</h3><blockquote>
+<p>print(a)</p>
+</blockquote>
+<p>如果数组太大而无法打印，NumPy将自动跳过数组的中心部分并仅打印角点<br>要禁用此行为并强制NumPy打印整个数组，你可以使用 set_printoptions 更改打印选项</p>
+<h3 id="数组操作"><a href="#数组操作" class="headerlink" title="数组操作"></a>数组操作</h3><p>数组上的算术运算符使用元素级别。计算结果会产生一个新的数组，并在每个元素上进行计算并填充到新的数组上。</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/python/" rel="tag"># python</a>
+              <a href="/tags/numpy/" rel="tag"># numpy</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/01/04/git-fork-and-sign-off/" rel="prev" title="git fork and sign-off">
+      <i class="fa fa-chevron-left"></i> git fork and sign-off
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/2020/01/04/cos-s3fs/" rel="next" title="cos s3fs">
+      cos s3fs <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+  </div>
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let activeClass = CONFIG.comments.activeClass;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#介绍"><span class="nav-number">1.</span> <span class="nav-text">介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是NumPy"><span class="nav-number">1.1.</span> <span class="nav-text">什么是NumPy</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#和Python原生数组array的区别"><span class="nav-number">1.2.</span> <span class="nav-text">和Python原生数组array的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#NumPy安装"><span class="nav-number">2.</span> <span class="nav-text">NumPy安装</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Pip"><span class="nav-number">2.1.</span> <span class="nav-text">Pip</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Homebrew"><span class="nav-number">2.2.</span> <span class="nav-text">Homebrew</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#快速入门"><span class="nav-number">3.</span> <span class="nav-text">快速入门</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#创建"><span class="nav-number">3.1.</span> <span class="nav-text">创建</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#打印"><span class="nav-number">3.2.</span> <span class="nav-text">打印</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数组操作"><span class="nav-number">3.3.</span> <span class="nav-text">数组操作</span></a></li></ol></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">Sally</p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Sally</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v4.2.0
+  </div>
+  <span class="post-meta-divider">|</span>
+  <div class="theme-info">主题 – <a href="https://mist.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Mist</a> v7.7.0
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
