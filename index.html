@@ -175,6 +175,152 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/09/COS-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/09/COS-command/" class="post-title-link" itemprop="url">COS command</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-09 17:06:34 / 修改时间：17:20:43" itemprop="dateCreated datePublished" datetime="2020-01-09T17:06:34+08:00">2020-01-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>remove non empty buckets<br>mc rm –recursive –force cos/<bucket_name></p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/09/sar-command/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="Sally">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Sally's blog">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/01/09/sar-command/" class="post-title-link" itemprop="url">sar command</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-01-09 13:20:58 / 修改时间：17:05:56" itemprop="dateCreated datePublished" datetime="2020-01-09T13:20:58+08:00">2020-01-09</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
+                    <span itemprop="name">指南</span>
+                  </a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>IBM Cloud 的 storage 有以下几种类型：<br>Local storage<br>嵌入在 disk，对虚拟机主机来说是本地存储。目前在新的 DC，都是 SSD，来提供最佳性能。</p>
+<p>Portable SAN storage<br>仅仅对VSI 开放的辅助存储。创建在 flash storage cluster 上的。这种架构具备很好的弹性可以提供更大的容量。如果主机错误，使用了 San 存储的 VSI 可以自动迁移到其他的主机并重启。<br>如果要在 IBM 网络的任意 DC 迁移主机数据，可以考虑使用 portable storage。对数据库程序很有效，可以在 VSI 之间迁移大数据集合。<br>所有的备用磁盘都是 portable storage。在任何时候可以卸载并挂到其他的 VS 上。</p>
+<p>补充的存储，例如 NFS，block storage， object storage。</p>
+<p>我们有时候碰到问题是 IO wait 过长，我们可以用sar命令来检查<br><a href="https://blog.csdn.net/danielmoore/article/details/79083180" target="_blank" rel="noopener">https://blog.csdn.net/danielmoore/article/details/79083180</a><br>是统计磁盘使用详情<br>sar -d -p -f</p>
+<p>可以得到数值高的设备</p>
+<p>sar -n DEV<br>显示网络接口信息<br>00:00:01        IFACE   rxpck/s   txpck/s    rxkB/s    txkB/s   rxcmp/s   txcmp/s  rxmcst/s</p>
+<p>IFACE：LAN接口<br>rxpck/s：每秒钟接收的数据包<br>txpck/s：每秒钟发送的数据包<br>rxbyt/s：每秒钟接收的字节数<br>txbyt/s：每秒钟发送的字节数<br>rxcmp/s：每秒钟接收的压缩数据包<br>txcmp/s：每秒钟发送的压缩数据包<br>rxmcst/s：每秒钟接收的多播数据包</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/cos-mount/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -987,272 +1133,6 @@
   
   
 
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/Proxy-setup/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sally">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sally's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/04/Proxy-setup/" class="post-title-link" itemprop="url">Proxy setup</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-04 17:11:34 / 修改时间：17:12:44" itemprop="dateCreated datePublished" datetime="2020-01-04T17:11:34+08:00">2020-01-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
-                    <span itemprop="name">指南</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>The purpose of this blog is to sort out the setup of proxy in MacOS</p>
-<h2 id="ShadowSocks"><a href="#ShadowSocks" class="headerlink" title="ShadowSocks"></a>ShadowSocks</h2><h3 id="using-single-container"><a href="#using-single-container" class="headerlink" title="using single container"></a>using single container</h3><blockquote>
-<p>docker pull oddrationale/docker-shadowsocks</p>
-<p>docker run -d -p 2022:2022 oddrationale/docker-shadowsocks -s 0.0.0.0 -p<br>2022 -k admin -m aes-256-cfb</p>
-</blockquote>
-<h3 id="kubenetes"><a href="#kubenetes" class="headerlink" title="kubenetes"></a>kubenetes</h3><ul>
-<li>deploy with a simple image</li>
-<li>execute below command</li>
-</ul>
-<blockquote>
-<p>kubectl exec -it  /bin/bash</p>
-<p>apt-get update &amp;&amp; apt-get install -y python-pip libsodium18</p>
-<p>pip install shadowsocks==2.8.2</p>
-</blockquote>
-<ul>
-<li>execute below command</li>
-</ul>
-<blockquote>
-<p>ssserver -p 1982 -k admin -m aes-256-cfb –user nobody -d start</p>
-</blockquote>
-<ul>
-<li>expose port</li>
-</ul>
-<blockquote>
-<p>kubectl expose deployment/shadowsocks –type=NodePort –port=1982<br>–name=shadowsocks –target-port=1982</p>
-</blockquote>
-<h3 id="shadowsocks-client-config"><a href="#shadowsocks-client-config" class="headerlink" title="shadowsocks client config"></a>shadowsocks client config</h3><p>open server preferences -&gt; + -&gt; Address: [public ip]:port -&gt; aes-256-cfb -&gt;<br>Password: admin</p>
-<p>set to use Auto proxy mode</p>
-<h2 id="sshpass"><a href="#sshpass" class="headerlink" title="sshpass"></a>sshpass</h2><blockquote>
-<p>sshpass -p [password] ssh -t -t -o StrictHostKeychecking=no -D [port]<br>[hostname]</p>
-</blockquote>
-<h2 id="CMD"><a href="#CMD" class="headerlink" title="CMD"></a>CMD</h2><p>Http proxy for current command window</p>
-<p><code>$ export http_proxy=http://127.0.0.1:8118</code></p>
-<p><code>$ export https_proxy=http://127.0.0.1:8118</code></p>
-<p>Socks5 proxy for current command window</p>
-<p><code>$ export http_proxy=socks5://127.0.0.1:8118</code></p>
-<p><code>$ export https_proxy=socks5://127.0.0.1:8118</code></p>
-<p>for wget and curl to use socks5</p>
-<p><code>$ export ALL_PROXY=socks5://127.0.0.1:8118</code></p>
-<p>Cancel the proxy</p>
-<p><code>$ unset http_proxy</code></p>
-<p><code>$ unset http_proxy</code></p>
-<p><code>$ unset ALL_PROXY</code></p>
-<p>Set permanently in ~/.zshrc</p>
-<blockquote>
-<p>alias proxy_https = “export https_proxy=socks5://127.0.0.1:8118”</p>
-</blockquote>
-<h2 id="Github"><a href="#Github" class="headerlink" title="Github"></a>Github</h2><blockquote>
-<p>git config –global http.proxy <a href="http://127.0.0.1:8118" target="_blank" rel="noopener">http://127.0.0.1:8118</a></p>
-<p>git config –global https.proxy <a href="http://127.0.0.1:8118" target="_blank" rel="noopener">http://127.0.0.1:8118</a></p>
-</blockquote>
-<p>or socks:</p>
-<blockquote>
-<p>git config –global http.proxy socks5://127.0.0.1:1080</p>
-<p>git config –global https.proxy socks5://127.0.0.1:1080</p>
-</blockquote>
-<p>cancel:</p>
-<blockquote>
-<p>git config –global –unset http.proxy</p>
-<p>git config –global –unset https.proxy</p>
-</blockquote>
-<h2 id="IPsec-L2TP-on-CentOS"><a href="#IPsec-L2TP-on-CentOS" class="headerlink" title="IPsec/L2TP on CentOS"></a>IPsec/L2TP on CentOS</h2><p>yum install wget<br>wget <a href="https://git.io/vpnsetup-centos" target="_blank" rel="noopener">https://git.io/vpnsetup-centos</a> -O vpnsetup.sh &amp;&amp; sudo sh vpnsetup.sh</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-        
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://sallymi.github.io/2020/01/04/setup-github-blog/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="Sally">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Sally's blog">
-    </span>
-      <header class="post-header">
-        <h1 class="post-title" itemprop="name headline">
-          
-            <a href="/2020/01/04/setup-github-blog/" class="post-title-link" itemprop="url">使用GitHub Page搭建个人博客</a>
-        </h1>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2020-01-04 16:53:48 / 修改时间：17:10:45" itemprop="dateCreated datePublished" datetime="2020-01-04T16:53:48+08:00">2020-01-04</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%8C%87%E5%8D%97/" itemprop="url" rel="index">
-                    <span itemprop="name">指南</span>
-                  </a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>GitHub Pages可以让网站直接托管在GitHub的服务器上，更新维护网站内容很简单，用git commit + git<br>push即可进行维护，因为GitHub Pages就是GitHub上的一个Git代码仓库。</p>
-<h2 id="GitHub-io"><a href="#GitHub-io" class="headerlink" title="GitHub.io"></a>GitHub.io</h2><p>创建一个代码仓库，命名为sallymi.github.io<br>Clone代码仓库到本地</p>
-<blockquote>
-<p>$ git clone <a href="https://github.com/sallymi/sallymi.github.io" target="_blank" rel="noopener">https://github.com/sallymi/sallymi.github.io</a></p>
-<p>$ cd sallymi.github.io</p>
-<p>$ echo “Hello World” &gt; index.html</p>
-<p>$ git add .</p>
-<p>$ git commit -am “Initial commit”</p>
-<p>$ git push</p>
-</blockquote>
-<p>访问sallymi.github.io</p>
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><h3 id="搭建Hexo"><a href="#搭建Hexo" class="headerlink" title="搭建Hexo"></a>搭建Hexo</h3><blockquote>
-<p>$ npm install -g hexo-cli</p>
-<p>$ hexo init myblog</p>
-<p>$ cd myblog</p>
-<p>$ npm install</p>
-</blockquote>
-<h3 id="运行Hexo"><a href="#运行Hexo" class="headerlink" title="运行Hexo"></a>运行Hexo</h3><blockquote>
-<p>$ hexo s</p>
-</blockquote>
-<p>输出如下</p>
-<blockquote>
-<p>INFO Start processing</p>
-<p>INFO Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.</p>
-</blockquote>
-<p>浏览器访问<a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到默认主题风格的博客了。</p>
-<h3 id="发布到GitHub-Pages"><a href="#发布到GitHub-Pages" class="headerlink" title="发布到GitHub Pages"></a>发布到GitHub Pages</h3><p>在myblog/_config.yml里修改：</p>
-<blockquote>
-<p>deploy:</p>
-<p>type: git</p>
-<p>repo: <a href="mailto:git@github.com">git@github.com</a>:sallymi/sallymi.github.io.git</p>
-<p>branch: master</p>
-</blockquote>
-<p>命令行出错的话需要安装</p>
-<blockquote>
-<p>$ npm install hexo-deployer-git –save</p>
-</blockquote>
-<p>发布命令：</p>
-<blockquote>
-<p>$ hexo d -g</p>
-</blockquote>
-<h3 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h3><blockquote>
-<p>$ hexo n ‘name’</p>
-</blockquote>
-<h3 id="安装Next主题"><a href="#安装Next主题" class="headerlink" title="安装Next主题"></a>安装Next主题</h3><blockquote>
-<p>cd myblog</p>
-<p>git clone <a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">https://github.com/theme-next/hexo-theme-next</a> themes/next</p>
-</blockquote>
-<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3><p>在_config.yml里面修改</p>
-<blockquote>
-<p>theme: next</p>
-</blockquote>
-<h3 id="配置Next主题"><a href="#配置Next主题" class="headerlink" title="配置Next主题"></a>配置Next主题</h3><ul>
-<li>选择Schema<br><br>四种可以选择:</li>
-</ul>
-<p>Muse, Mist, Pisces, Gemini</p>
-<ul>
-<li>设置语言</li>
-</ul>
-<blockquote>
-<p>language: zh-Hans</p>
-</blockquote>
-<ul>
-<li>设置菜单</li>
-</ul>
-<p>对应字段是menu。菜单内容的设置格式是：item name: link。其中 item name<br>是一个名称，这个名称并不直接显示在页面上，它将用于匹配图标以及翻译。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
   </div>
 
   
@@ -1323,7 +1203,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1336,7 +1216,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">11</span>
+        <span class="site-state-item-count">12</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
